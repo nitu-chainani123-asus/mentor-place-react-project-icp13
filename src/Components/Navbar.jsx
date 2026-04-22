@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
-import "../styles/navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <h2>PlaceMentor AI</h2>
-
-      <div>
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/profile">Profile</Link>
+    <nav className="bg-blue-600 p-4 flex justify-between text-white">
+      <h1 className="font-bold text-xl">PlaceMentor AI</h1>
+      <div className="space-x-4">
+        <Link to="/">Dashboard</Link>
+        <Link to="/upload">Resume Upload</Link>
       </div>
     </nav>
   );
