@@ -9,11 +9,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard />} />
 
-        {/* Pages */}
-        <Route path="/upload" element={<Dummy name="Resume Upload Page" />} />
-        <Route path="/preparation" element={<Dummy name="Placement Prep Page" />} />
-        <Route path="/mock" element={<Dummy name="Mock Interview Page" />} />
-        <Route path="/progress" element={<Dummy name="Progress Tracker Page" />} />
+        <Route path="/upload" element={<Dummy name="Resume Upload" />} />
+        <Route path="/prep" element={<Dummy name="Placement Prep" />} />
+        <Route path="/mock" element={<Dummy name="Mock Interview" />} />
+        <Route path="/progress" element={<Dummy name="Progress Tracker" />} />
+        <Route path="/career" element={<Dummy name="Career Guidance" />} />
       </Routes>
     </BrowserRouter>
   );

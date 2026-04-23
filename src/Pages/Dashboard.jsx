@@ -4,39 +4,20 @@ import "./Dashboard.css";
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  // 🔥 Clean scalable data (Best Practice)
   const features = [
-    {
-      title: "Resume Upload",
-      desc: "Upload & analyze your resume",
-      path: "/upload",
-      icon: "📄",
-    },
-    {
-      title: "Placement Preparation",
-      desc: "Prepare for interviews",
-      path: "/preparation",
-      icon: "📚",
-    },
-    {
-      title: "Mock Interview",
-      desc: "Practice real interviews",
-      path: "/mock",
-      icon: "🎤",
-    },
-    {
-      title: "Progress Tracker",
-      desc: "Track your growth",
-      path: "/progress",
-      icon: "📊",
-    },
+    { title: "Resume Upload", path: "/upload", icon: "📄" },
+    { title: "Placement Preparation", path: "/prep", icon: "📚" },
+    { title: "Mock Interview", path: "/mock", icon: "🎤" },
+    { title: "Progress Tracker", path: "/progress", icon: "📊" },
+    { title: "Career Guidance", path: "/career", icon: "🚀" },
   ];
 
   return (
     <div className="dashboard">
-      <h1 className="title">Welcome back 👋</h1>
 
-      <div className="grid">
+      <h1 className="heading">PlaceMentor Dashboard</h1>
+
+      <div className="cards">
         {features.map((item, index) => (
           <div
             key={index}
@@ -45,10 +26,10 @@ const Dashboard = () => {
           >
             <div className="icon">{item.icon}</div>
             <h2>{item.title}</h2>
-            <p>{item.desc}</p>
           </div>
         ))}
       </div>
+
     </div>
   );
 };
