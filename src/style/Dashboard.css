@@ -1,13 +1,17 @@
 .dashboard {
   padding: 30px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
 }
 
-.dashboard h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
+.dashboard-title {
+  font-size: 32px;
   color: white;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
 
+/* Cards Layout */
 .card-container {
   display: flex;
   gap: 20px;
@@ -21,20 +25,15 @@
 
 .btn {
   padding: 10px 20px;
-  margin-right: 15px;
   border: none;
+  margin-right: 15px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-weight: 500;
 }
 
 .btn-blue {
   background: #007bff;
-  color: white;
-}
-
-.btn-green {
-  background: #28a745;
   color: white;
 }
 

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Card from "../components/Card";
 import { useNavigate } from "react-router-dom";
+import "../styles/Dashboard.css";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-
   const [score, setScore] = useState(65);
 
   const updateScore = () => {
@@ -17,28 +17,28 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold mb-4">Welcome back 👋</h1>
+    <div className="dashboard">
+      <h1 className="dashboard-title">Welcome back 👋</h1>
 
-      {/* Cards */}
-      <div className="flex gap-6 flex-wrap">
-        <Card title="Resume Score" value={`${score}%`} />
-        <Card title="Progress" value={`${score}%`} />
-        <Card title="Status" value={getStatus()} status={getStatus()} />
+      {/* Cards Section */}
+      <div className="card-container">
+        <Card title="Resume Score" value={`${score}%`} type="score" />
+        <Card title="Progress" value={`${score}%`} type="progress" />
+        <Card title="Status" value={getStatus()} type="status" />
       </div>
 
       {/* Buttons */}
-      <div className="mt-8 space-x-4">
+      <div className="dashboard-buttons">
         <button
+          className="btn btn-blue"
           onClick={() => navigate("/upload")}
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg"
         >
           Upload Resume
         </button>
 
         <button
+          className="btn btn-purple"
           onClick={updateScore}
-          className="bg-purple-600 text-white px-6 py-2 rounded-lg"
         >
           Refresh Score
         </button>
@@ -47,6 +47,4 @@ const Dashboard = () => {
   );
 };
 
-
 export default Dashboard;
-

@@ -1,0 +1,38 @@
+.card {
+  width: 220px;
+  padding: 20px;
+  border-radius: 16px;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Types */
+.card-score {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card-progress {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.card-status {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+/* Text */
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: bold;
+}

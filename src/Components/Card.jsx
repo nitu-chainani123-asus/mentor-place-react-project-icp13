@@ -1,18 +1,10 @@
-const Card = ({ title, value, status }) => {
-  return (
-    <div className="bg-white shadow-lg rounded-2xl p-6 w-64 text-center hover:scale-105 transition">
-      <h2 className="text-lg font-semibold text-gray-600">{title}</h2>
-      <p className="text-3xl font-bold mt-2 text-blue-600">{value}</p>
+import "../styles/Card.css";
 
-      {status && (
-        <p
-          className={`mt-2 font-medium ${
-            status === "Good" ? "text-green-500" : "text-red-500"
-          }`}
-        >
-          {status}
-        </p>
-      )}
+const Card = ({ title, value, type }) => {
+  return (
+    <div className={`card card-${type}`}>
+      <h3 className="card-title">{title}</h3>
+      <p className="card-value">{value}</p>
     </div>
   );
 };
