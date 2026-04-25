@@ -10,3 +10,6 @@ function FeatureCard({ title, desc, icon }) {
     </div>
   );
 }
+
+export default function Home() {
+  const navigate = useNavigate();
