@@ -54,3 +54,37 @@ export default function Login() {
       });
     }
   };
+
+   return (
+    <div className="login-container">
+
+      <div className="form-box">
+        <h2>{isSignup ? "Create Account" : "Login"}</h2>
+
+        <form onSubmit={handleSubmit}>
+
+          {/* NAME (Signup only) */}
+          {isSignup && (
+            <div className="input-group">
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={form.name}
+                onChange={handleChange}
+              />
+              {errors.name && <p className="error">{errors.name}</p>}
+            </div>
+          )}
+
+          {/* EMAIL */}
+          <div className="input-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={form.email}
+              onChange={handleChange}
+            />
+            {errors.email && <p className="error">{errors.email}</p>}
+          </div>
