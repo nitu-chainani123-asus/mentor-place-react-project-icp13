@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../styles/Mockinterview.css";
 
 const categories = [
-  { name: "Aptitude 🧠", key: "aptitude" },
-  { name: "DSA 💻", key: "dsa" },
-  { name: "Interview 🎤", key: "interview" },
-  { name: "CS Fundamentals 📚", key: "cs" },
+  { name: "Aptitude 🧠", key: "aptitude", subtitle: "Logic, math, and reasoning" },
+  { name: "DSA 💻", key: "dsa", subtitle: "Algorithms, structures, and patterns" },
+  { name: "Interview 🎤", key: "interview", subtitle: "Behavioural and communication practice" },
+  { name: "CS Fundamentals 📚", key: "cs", subtitle: "Core theory and systems knowledge" },
 ];
 
 const questionsByCategory = {
@@ -161,7 +161,7 @@ export default function MockInterview() {
               }}
             >
               <h2>{c.name}</h2>
-              <p>10 Questions</p>
+              <p className="card-subtitle">{c.subtitle}</p>
             </div>
           ))}
         </div>
@@ -201,23 +201,45 @@ export default function MockInterview() {
 
   // 🔵 RESULT SCREEN
   return (
-    <div className="container">
-      <div className="result-box">
-        <h2>🎉 Completed</h2>
-        <h3>Score: {score}/10</h3>
-        <button onClick={reset}>Restart</button>
+    <div className="container assessment-page">
+      <div className="assessment-card">
+        <div className="assessment-header">
+          <h1>Assessment Completed</h1>
+          <p>Review your performance and saved quiz history.</p>
+        </div>
+
+        <div className="progress-bar">
+          <div className="progress-fill" style={{ width: "100%" }} />
+        </div>
+
+        <div className="result-card">
+          <p className="result-status">Completed</p>
+          <h2>{score}/10</h2>
+          <p className="result-subtitle">You completed the mock interview quiz.</p>
+
+          <div className="action-buttons">
+            <button className="pill-button" onClick={reset}>
+              Restart
+            </button>
+            <button className="pill-button secondary">Your Data</button>
+          </div>
+        </div>
       </div>
 
-      <div className="saved">
-        <h3>📊 History</h3>
-        {savedData.map((d, i) => (
-          <div key={i} className="saved-card">
-            <p>{d.date}</p>
-            <p>{d.category}</p>
-            <p>Score: {d.score}</p>
-            <p>{d.rank}</p>
-          </div>
-        ))}
+      <div className="saved-data-section">
+        <h3>Saved Quiz Data:</h3>
+        {savedData.length === 0 ? (
+          <p className="empty-note">No saved history yet.</p>
+        ) : (
+          savedData.map((d, i) => (
+            <div key={i} className="saved-data-card">
+              <p className="saved-date">{d.date}</p>
+              <p>{d.category}</p>
+              <p>Score: {d.score}</p>
+              <p>{d.rank}</p>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
