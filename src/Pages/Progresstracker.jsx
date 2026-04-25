@@ -64,3 +64,51 @@ const Progresstracker = () => {
             <div className="card-header">
               <h2>Detailed Milestones</h2>
             </div>
+<div className="milestones-table">
+              <div className="table-header">
+                <span>Milestone Name</span>
+                <span>Last Activity</span>
+                <span>Status</span>
+              </div>
+
+              <div className="table-body">
+                {items.map((item) => (
+                  <div key={item.id} className="table-row">
+                    <div className="col-name">
+                      <strong>{item.name}</strong>
+                    </div>
+
+                    <div className="col-date">{item.date}</div>
+
+                    <div className="col-progress">
+                      <div className="mini-progress-group">
+                        <div className="mini-bar-base">
+                          <div
+                            className="mini-bar-fill-proper"
+                            style={{
+                              width: `${item.progress}%`,
+                              backgroundColor:
+                                item.progress === 100
+                                  ? "#10b981"
+                                  : "#3b82f6",
+                            }}
+                          ></div>
+                        </div>
+
+                        <span className="mini-percent-text">
+                          {item.progress}%
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default Progresstracker;
