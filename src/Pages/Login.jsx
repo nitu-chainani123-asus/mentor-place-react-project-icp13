@@ -41,3 +41,23 @@ export default function Login() {
 
     return newErrors;
   };
+
+   // Submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      alert(isSignup ? "Signup Successful 🚀" : "Login Successful 🔐");
+
+     
+      if (!isSignup) {
+        navigate("/dashboard");
+      }
+
+    
+      if (isSignup) {
+        setIsSignup(false);
+      }
