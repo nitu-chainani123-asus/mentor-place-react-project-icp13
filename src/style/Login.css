@@ -59,3 +59,14 @@
 .btn:hover {
   transform: scale(1.05);
 }
+
+.toggle {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.toggle span {
+  color: #4f46e5;
+  cursor: pointer;
+  font-weight: 600;
+}
