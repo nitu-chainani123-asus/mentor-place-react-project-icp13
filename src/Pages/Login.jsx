@@ -61,3 +61,34 @@ export default function Login() {
       if (isSignup) {
         setIsSignup(false);
       }
+
+
+       // Reset form
+      setForm({
+        name: "",
+        email: "",
+        password: "",
+      });
+    }
+  };
+
+  return (
+    <div className="login-container">
+      <div className="form-box">
+        <h2>{isSignup ? "Create Account" : "Login"}</h2>
+
+        <form onSubmit={handleSubmit}>
+          
+         
+          {isSignup && (
+            <div className="input-group">
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={form.name}
+                onChange={handleChange}
+              />
+              {errors.name && <p className="error">{errors.name}</p>}
+            </div>
+          )}
