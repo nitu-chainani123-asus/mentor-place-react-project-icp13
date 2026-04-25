@@ -43,3 +43,5 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <h1>PlaceMentor</h1>
+          <p>Smart Placement Preparation System</p>
+        <div className="btn-container"></div>
