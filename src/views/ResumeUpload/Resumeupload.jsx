@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/ResumeUpload.css";
+import "./ResumeUpload.css";
 
 const ResumeUpload = () => {
   const [file, setFile] = useState(null);
