@@ -39,3 +39,14 @@ const Progresstracker = () => {
   const toggleExpand = (id) => {
     setExpandedId(expandedId === id ? null : id);
   };
+ return (
+    <div className="proper-tracker-container">
+      <main className="proper-main">
+        {/* Header */}
+        <div className="page-header">
+          <div className="breadcrumb">
+            Dashboard / <span className="active">Progress Tracker</span>
+          </div>
+          <h1>🚀 My Placement Journey</h1>
+          <p>Monitor your preparation status and upcoming milestones with ease.</p>
+        </div>
