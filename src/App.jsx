@@ -1,30 +1,6 @@
-import { useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { ThemeProvider } from "./context/ThemeContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
 
-import Home            from "./views/Home/Home";
-import Dashboard       from "./views/Dashboard/Dashboard";
-import MockInterview   from "./views/MockInterview/MockInterview";
-import Profile         from "./views/Profile/Profile";
-import Resources       from "./views/Resources/Resources";
-import InterviewTips   from "./views/InterviewTips/InterviewTips";
-import AptitudePractice from "./views/AptitudePractice/AptitudePractice";
-import DSARoadmap      from "./views/DSARoadmap/DSARoadmap";
-import CompanyGuides   from "./views/CompanyGuides/CompanyGuides";
-import PlacementFAQs   from "./views/PlacementFAQs/PlacementFAQs";
-import Community       from "./views/Community/Community";
-import PlacementPrepration from "./views/PlacementPrepration/PlacementPrepration";
-import ResumeUpload    from "./views/ResumeUpload/Resumeupload";
-import ResumeAnalysis  from "./views/ResumeAnalysis/ResumeAnalysis";
-import CompanyQuestions from "./views/CompanyQuestions/CompanyQuestions";
-
-/* ── Default user (auto-logged in for demo) ── */
-const DEFAULT_USER = {
-  name: "Aksha Student",
-  branch: "CSE",
-  year: "3rd Year",
-  skills: "React, DSA, Python",
-};
 
 const DEFAULT_COMPLETED = {
   resume: false, prep: false, mock: false,
