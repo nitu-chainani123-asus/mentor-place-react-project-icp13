@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
-import Progresstracker from './Pages./progresstracker';
+
 
 const Dummy = ({ name }) => <h1 style={{textAlign:"center"}}>{name}</h1>;
 
@@ -17,11 +17,7 @@ function App() {
         <Route path="/career" element={<Dummy name="Career Guidance" />} />
       </Routes>
     </BrowserRouter>
-    function App() {
-  return (
-    <Progresstracker />
-  )
-}
+  );
 }
 
 export default App;
