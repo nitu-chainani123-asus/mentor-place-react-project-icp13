@@ -73,3 +73,10 @@ const Progresstracker = () => {
             </div>
           </div>
         </div>
+        <div className="dashboard-grid">
+          {/* Overall Progress Card */}
+          <section className="card summary-card gradient-bg-blue">
+            <div className="card-header">
+              <h2>📊 Overall Status</h2>
+              <span className="badge badge-success">✓ Updated today</span>
+            </div>
