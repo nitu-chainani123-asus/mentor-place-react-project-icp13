@@ -1,0 +1,232 @@
+/* ── Footer Base ── */
+.ft {
+  position: relative;
+  background: linear-gradient(180deg, #0f0a28 0%, #1a0a3e 100%);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+  padding: 60px 0 0;
+}
+
+/* Glow effect top */
+.ft-glow {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(118, 75, 162, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Top Grid ── */
+.ft-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px 52px;
+}
+
+/* ── Brand Col ── */
+.ft-logo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+.ft-logo strong {
+  background: linear-gradient(135deg, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.ft-tagline {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 260px;
+}
+
+.ft-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.ft-social {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.ft-social:hover {
+  background: linear-gradient(135deg, #a78bfa, #f472b6);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+/* ── Columns ── */
+.ft-col-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 18px;
+}
+
+.ft-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.ft-list li {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  transition: color 0.2s, padding-left 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ft-list li:hover {
+  color: #c4b5fd;
+  padding-left: 4px;
+}
+
+/* ── Newsletter Col ── */
+.ft-news-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.ft-news-form {
+  display: flex;
+  gap: 0;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ft-news-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  padding: 11px 14px;
+  font-size: 13px;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  outline: none;
+}
+
+.ft-news-input::placeholder { color: rgba(255,255,255,0.3); }
+
+.ft-news-btn {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  padding: 11px 18px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Segoe UI", sans-serif;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.ft-news-btn:hover { opacity: 0.88; }
+
+.ft-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ft-badge {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ── Divider ── */
+.ft-divider {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
+
+/* ── Bottom ── */
+.ft-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 48px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ft-copy {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+}
+
+.ft-bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+.ft-bottom-links span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.ft-bottom-links span:hover { color: #c4b5fd; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .ft-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .ft-news-col { grid-column: span 2; }
+}
+
+@media (max-width: 600px) {
+  .ft-top { grid-template-columns: 1fr; padding: 0 24px 40px; gap: 32px; }
+  .ft-news-col { grid-column: span 1; }
+  .ft-bottom { padding: 18px 24px 24px; flex-direction: column; text-align: center; }
+  .ft-bottom-links { justify-content: center; }
+  .ft-tagline { max-width: 100%; }
+}
