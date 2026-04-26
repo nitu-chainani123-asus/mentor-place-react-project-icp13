@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/Dashboard.css";
+import "./Dashboard.css";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
