@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* FULL PAGE */
+.upload-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Same as your image */
+  background: linear-gradient(135deg, #cbd5f5, #fbcfe8);
+}
+
+/* CENTER CONTAINER */
+.upload-container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* TITLE */
+.upload-container h1 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.upload-container p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* UPLOAD BOX */
+.upload-box {
+  width: 100%;
+  margin: 30px auto;
+  padding: 45px 30px;
+
+  border-radius: 20px;
+  border: 2px dashed #34d399;
+
+  /* glass effect */
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.upload-box:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: #22c55e;
+}
+
+/* ICON */
+.upload-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.upload-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #111827;
+}
+
+.upload-box p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.upload-box span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* FILE NAME BOX */
+.file-name {
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 15px;
+
+  padding: 8px 16px;
+  background: white;
+  border-radius: 10px;
+
+  font-size: 14px;
+  color: #374151;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* BUTTON */
+.analyze-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+
+  background: #22c55e;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.analyze-btn:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
