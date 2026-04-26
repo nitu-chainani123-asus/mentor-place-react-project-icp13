@@ -30,3 +30,12 @@ const Progresstracker = () => {
         setDisplayProgress(Math.round(current));
       }
     }, 20);
+      return () => clearInterval(timer);
+  }, [items]);
+
+  const completedCount = items.filter(item => item.progress === 100).length;
+  const inProgressCount = items.filter(item => item.progress > 0 && item.progress < 100).length;
+
+  const toggleExpand = (id) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
