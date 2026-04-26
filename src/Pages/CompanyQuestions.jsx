@@ -86,5 +86,4 @@ const CompanyQuestions = () => {
   );
 };
 
-
 export default CompanyQuestions;
