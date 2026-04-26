@@ -87,3 +87,18 @@ const Progresstracker = () => {
                   Completion Score
                 </span>
               </div>
+              <div className="progress-bar-wrapper">
+                <div className="progress-bar-base">
+                  <div
+                    className="progress-bar-fill-proper"
+                    style={{ width: `${displayProgress}%` }}
+                  ></div>
+                </div>
+                <div className="progress-bar-markers">
+                  <span>Start</span>
+                  <span>Mid</span>
+                  <span>Goal</span>
+                </div>
+              </div>
+            </div>
+          </section>
