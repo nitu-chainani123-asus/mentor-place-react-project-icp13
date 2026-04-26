@@ -115,3 +115,17 @@ const Progresstracker = () => {
                 <span>Activity</span>
                 <span>Status</span>
               </div>
+              <div className="table-body">
+                {items.map((item) => (
+                  <div 
+                    key={item.id} 
+                    className="table-row"
+                    onMouseEnter={() => setHoveredId(item.id)}
+                    onMouseLeave={() => setHoveredId(null)}
+                    onClick={() => toggleExpand(item.id)}
+                    style={{
+                      backgroundColor: hoveredId === item.id ? "#f0f9ff" : "transparent",
+                      transition: "all 0.3s ease",
+                      cursor: "pointer"
+                    }}
+                  ></div>
