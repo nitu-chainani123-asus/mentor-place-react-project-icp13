@@ -1,12 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/Footer.css";
 
 const Footer = () => {
-  return (
-    <footer className="footer">
-      <p>© 2026 PlaceMentor AI | All Rights Reserved</p>
-    </footer>
-  );
-};
+  const navigate = useNavigate();
+  const year = new Date().getFullYear();
 
-export default Footer;
-
+  
