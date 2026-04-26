@@ -128,4 +128,14 @@ const Progresstracker = () => {
                       transition: "all 0.3s ease",
                       cursor: "pointer"
                     }}
-                  ></div>
+                  >
+                    <div className="col-name">
+                      <span className="milestone-icon">{item.icon}</span>
+                      <div>
+                        <strong>{item.name}</strong>
+                        <div className="status-badge" style={{ backgroundColor: item.color }}>
+                          {item.status}
+                        </div>
+                      </div>
+                    </div>
+                  
