@@ -67,4 +67,17 @@ const Footer = () => {
       {/* Divider */}
       <div className="ft-divider" />
 
-     
+      {/* Bottom */}
+      <div className="ft-bottom">
+        <p className="ft-copy">© {year} PlacementPro. Made with ❤️ for students.</p>
+        <div className="ft-bottom-links">
+          <span>Privacy Policy</span>
+          <span>Terms of Use</span>
+          <span>Contact Us</span>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
