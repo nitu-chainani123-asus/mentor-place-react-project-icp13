@@ -225,19 +225,46 @@
 
 /* Theme toggle */
 .nb-theme-toggle {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 8px 11px;
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+  padding: 6px 12px 6px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
   cursor: pointer;
-  transition: background 0.2s, transform 0.25s;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
   line-height: 1;
+  white-space: nowrap;
 }
 .nb-theme-toggle:hover {
   background: rgba(255,255,255,0.15);
-  transform: rotate(22deg) scale(1.12);
+  border-color: rgba(196,181,253,0.4);
+  transform: translateY(-1px);
 }
+.nb-theme-toggle-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Light theme navbar overrides */
+[data-theme="light"] .nb {
+  background: linear-gradient(135deg, #ede9fe 0%, #fdf4ff 100%);
+  border-bottom: 1px solid rgba(139,92,246,0.15);
+  box-shadow: 0 2px 20px rgba(139,92,246,0.1);
+}
+[data-theme="light"] .nb-link { color: #4b5563; }
+[data-theme="light"] .nb-link:hover { background: rgba(139,92,246,0.08); color: #6d28d9; }
+[data-theme="light"] .nb-link-active { background: rgba(139,92,246,0.12); color: #6d28d9; }
+[data-theme="light"] .nb-brand-text { color: #111827; }
+[data-theme="light"] .nb-bell { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.1); }
+[data-theme="light"] .nb-theme-toggle { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.1); color: #374151; }
+[data-theme="light"] .nb-user { background: rgba(139,92,246,0.08); border-color: rgba(139,92,246,0.2); }
+[data-theme="light"] .nb-user-name { color: #111827; }
+[data-theme="light"] .nb-user-role { color: #6b7280; }
 
 /* User pill */
 .nb-user-wrap { position: relative; }

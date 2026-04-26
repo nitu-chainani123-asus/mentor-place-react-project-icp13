@@ -149,7 +149,8 @@ const Navbar = ({ form, onLogout, onProfileClick }) => {
 
         {/* Theme Toggle */}
         <button className="nb-theme-toggle" onClick={toggleTheme} title="Toggle theme">
-          {theme === "dark" ? "☀️" : "🌙"}
+          <span className="nb-theme-toggle-icon">{theme === "dark" ? "☀️" : "🌙"}</span>
+          {theme === "dark" ? "Light" : "Dark"}
         </button>
 
         {/* ── User Dropdown ── */}
