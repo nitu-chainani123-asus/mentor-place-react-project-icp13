@@ -7,9 +7,6 @@ import "../styles/CompanyQuestions.css";
 
 
 
-
-
-
 const CompanyQuestions = () => {
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [selectedSubject, setSelectedSubject] = useState(null);
