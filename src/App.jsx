@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { ThemeProvider } from "./context/ThemeContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
 
+<<<<<<< HEAD
 import Home            from "./views/Home/Home";
 import Dashboard       from "./views/Dashboard/Dashboard";
 import MockInterview   from "./views/MockInterview/MockInterview";
@@ -25,6 +25,8 @@ const DEFAULT_USER = {
   year: "3rd Year",
   skills: "React, DSA, Python",
 };
+=======
+>>>>>>> 55c73a8a90cf65faf5d03b2560fe63c2a84a1b35
 
 const DEFAULT_COMPLETED = {
   resume: false, prep: false, mock: false,
